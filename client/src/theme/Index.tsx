@@ -13,13 +13,12 @@ width:100%;
 
 const Section = styled.section`
 width:85%;
-height:100%;
+min-height:calc(100vh - 100px);
 border:1px solid #000;
 padding: 10px 20px;
 overflow:auto;
 gap:10px;
 display:grid;
-
 `
 
 const Theme = () => {

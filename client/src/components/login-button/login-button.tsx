@@ -1,5 +1,6 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import Button from "../../ui/button/Button";
 
 const LoginButton: React.FC = () => {
   const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
@@ -14,7 +15,7 @@ const LoginButton: React.FC = () => {
           </button>
         </div>
       ) : (
-        <button onClick={() => loginWithRedirect()}>Login with Auth0</button>
+        <Button onClick={() =>loginWithRedirect()} >Login</Button>
       )}
     </div>
   );

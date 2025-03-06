@@ -2,12 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 import { count } from "console";
 
 interface userState {
-    count:any
+    count:any,
+    loginState:any
 }
 
 
 const initialState:userState = {
-    count : 0
+    count : 0,
+    loginState:false
 }
 
 
@@ -20,7 +22,7 @@ const userSlice = createSlice({
         },
         decrement:(state) =>{
             state.count = state.count - 1;
-        }
+        },
     }
 })
 

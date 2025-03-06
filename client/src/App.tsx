@@ -3,7 +3,6 @@ import Context from './context/context';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Auth0Provider } from "@auth0/auth0-react";
 import AppRoutes from './routes/Index';
-import LoginButton from './components/login-button/login-button';
 
 
 const queryClient = new QueryClient();
