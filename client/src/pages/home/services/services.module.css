@@ -1,0 +1,11 @@
+.services{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    gap: 16px;
+}
+
+.title{
+    grid-column: 1/4;
+    text-align: center;
+}

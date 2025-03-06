@@ -1,0 +1,16 @@
+.footer{
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    justify-content: space-between;
+}
+
+.footer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

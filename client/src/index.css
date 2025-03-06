@@ -3,3 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+a{
+  text-decoration: none;
+}
+
+
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  
+  --secondary-color: #E7E9EB;
+  --secondary-hover: #545b62;
+  
+  --tertiary-color: #04AA6D;
+  --tertiary-hover: #04AA6D80;
+  
+  --text-color: white;
+}

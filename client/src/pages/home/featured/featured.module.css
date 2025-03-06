@@ -1,0 +1,10 @@
+.featured{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+}
+
+.title{
+    grid-column: 1/4;
+    text-align: center;
+}

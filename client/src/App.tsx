@@ -14,14 +14,12 @@ function App() {
      <Auth0Provider
       domain="dev-qs40e6dasr66todq.us.auth0.com"
       clientId="cXUpKtBHQ30Z8JiDEaEPHrwrzPeN09wn"
-      authorizationParams={{ redirect_uri: window.location.origin }}
-    >
+      authorizationParams={{ redirect_uri: window.location.origin }}>
     <QueryClientProvider client={queryClient}>
     <Context>
     <AppRoutes/>
     </Context>
     </QueryClientProvider>
-    <LoginButton/>
     </Auth0Provider>
     </>
   );

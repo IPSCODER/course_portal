@@ -2,6 +2,9 @@ import { lazy } from "react";
 import Loadable from "../components/loadable";
 import { useRoutes } from "react-router-dom";
 import Theme from "../theme/Index";
+const Purchased = Loadable(lazy(() => import("../pages/purchased/Index")));
+const Setting = Loadable(lazy(() =>import("../pages/setting/Index")));
+const Profile = Loadable(lazy(() => import("../pages/profile/Index")));
 const Auth = Loadable(lazy(() => import("../pages/auth/Index")))
 const Courses = Loadable(lazy(() => import("../pages/courses/Index")))
 const Home = Loadable(lazy(() => import("../pages/home/Index")))
@@ -15,9 +18,11 @@ const routes = [
     {path:'/not-authorized',element:<NotAuthorized/>},
     {path:'/',element:<Theme/>,children:[
     {path:'/',element:<Home/>},
-    {path:'/admin',element:<Admin/>},
-    {path:'/courses',element:<Courses/>},
-    ]}
+    {path:'/new-courses',element:<Courses/>},
+    {path:'/purchased',element:<Purchased/>},
+    {path:'/setting',element:<Setting/>},
+]},
+{path:'/my-profile',element:<Profile/>}
 ]
 
 const AppRoutes = () =>{
