@@ -4,20 +4,18 @@ import Button from "../../ui/button/Button";
 
 const LoginButton: React.FC = () => {
   const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
+  
+  if(isAuthenticated){
+    console.log(isAuthenticated);
+    
+    return null
+  }
+  
 
   return (
-    <div>
-      {isAuthenticated ? (
-        <div>
-          <p>Welcome, {user?.name}!</p>
-          <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-            Logout
-          </button>
-        </div>
-      ) : (
+    <li>
         <Button onClick={() =>loginWithRedirect()} >Login</Button>
-      )}
-    </div>
+    </li>
   );
 };
 

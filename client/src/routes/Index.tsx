@@ -3,6 +3,7 @@ import Loadable from "../components/loadable";
 import { useRoutes } from "react-router-dom";
 import Theme from "../theme/Index";
 import ProtectedRoute from "./protected-routes";
+import CourseView from "../pages/view-page/Index";
 const Purchased = Loadable(lazy(() => import("../pages/purchased/Index")));
 const Setting = Loadable(lazy(() =>import("../pages/setting/Index")));
 const Profile = Loadable(lazy(() => import("../pages/profile/Index")));
@@ -22,8 +23,9 @@ const routes = [
     {path:'/new-courses',element:<Courses/>},
     {path:'/purchased',element: (<ProtectedRoute element={<Purchased/>} />) },
     {path:'/setting',element:(<ProtectedRoute element={<Setting/>} />)},
+    {path:'/new-course/:route',element:<CourseView/> }
 ]},
-{path:'/my-profile',element:(<ProtectedRoute element={<Profile/>} />)}
+{path:'/my-profile',element:(<ProtectedRoute element={<Profile/>} />)},
 ]
 
 const AppRoutes = () =>{

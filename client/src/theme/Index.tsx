@@ -18,7 +18,7 @@ border:1px solid #000;
 padding: 10px 20px;
 overflow:auto;
 gap:10px;
-display:grid;
+display:block;
 `
 
 const Theme = () => {

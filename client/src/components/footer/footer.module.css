@@ -7,6 +7,7 @@
     border-radius: 5px;
     background-color: var(--secondary-color);
     justify-content: space-between;
+    margin-top: 10px;
 }
 
 .footer ul{

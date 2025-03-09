@@ -3,7 +3,6 @@ import UserContext from "./user-context"
 
 const Context = ({children}:{children:React.ReactNode}) => {
 
-    console.log("context")
 
     return (
         <>

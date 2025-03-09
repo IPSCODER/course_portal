@@ -1,22 +1,26 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { decrement, increment } from '../../store/reducers/userSlice'
+import {  useSelector } from 'react-redux'
+import classes from "./courses.module.css"
+import CourseCard from '../../components/course-card/course-card'
+import ErrorBoundary from '../../components/error-handling/Index'
 
 const Courses = () => {
 
-  const count = useSelector((state:any) => state.user.count)
-  const disptach =useDispatch()
+  const courses = useSelector((state:any) => state.user.courses)
 
-  console.log("courses")
+  console.log("courses",courses)
 
   return (
-    <div>
-      <h1>{count}</h1>
-      <button onClick={()=>{disptach(increment())}} >Increment</button>
-      <button onClick={()=>{disptach(decrement())}} >Decrement</button>
+      <div className={classes.courses} >
 
-      <h2>Course</h2>
-    </div>
+      {courses && courses.map((items:any,index:any) =>{
+        return (
+          <ErrorBoundary>
+          <CourseCard key={index} items={items} />
+          </ErrorBoundary>
+        )
+      })}
+      </div>
   )
 }
 

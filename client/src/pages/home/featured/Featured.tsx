@@ -6,9 +6,6 @@ const Featured = () => {
   return (
     <div className={classes.featured} >
         <h1 className={classes.title} >Featured</h1>
-        <CourseCard/>
-        <CourseCard/>
-        <CourseCard/>
     </div>
   )
 }

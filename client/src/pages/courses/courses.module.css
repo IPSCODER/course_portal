@@ -1,0 +1,28 @@
+.courses {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    justify-content: center;
+}
+
+/* Larger screens (1200px and above) */
+@media (min-width: 1200px) {
+    .courses {
+        grid-template-columns: repeat(3, 32.50%);
+    }
+}
+
+/* Medium screens (between 768px and 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .courses {
+        grid-template-columns: repeat(2, 49.50%);
+    }
+}
+
+/* Small screens (below 768px) */
+@media (max-width: 767px) {
+    .courses {
+        grid-template-columns: repeat(1, 99.50%);
+    }
+}

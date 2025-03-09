@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = () => {
+const Card = ({items}:any) => {
   return (
     <div>Card</div>
   )
