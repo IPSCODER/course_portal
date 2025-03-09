@@ -5,14 +5,16 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import AppRoutes from './routes/Index';
 
 
+
 function App() {
 
+  console.log(process.env.REACT_APP_AUTH_DOMAIN,"env")
 
   return (
     <>
      <Auth0Provider
-      domain="dev-qs40e6dasr66todq.us.auth0.com"
-      clientId="WDVzyXqCBPJarITjol0Xope00gUD0CrO"
+      domain={process.env.REACT_APP_AUTH_DOMAIN || "" } 
+      clientId={process.env.REACT_APP_AUTH_CLIENTID || "" } 
       authorizationParams={{ redirect_uri: window.location.origin }}>
     <Context>
     <AppRoutes/>

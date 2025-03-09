@@ -9,7 +9,6 @@ const CourseView = () => {
   const course =  useSelector((state:any) => state.user.course)
   const discountPercentage = Math.round(((course.price - course.discounted_price) / course.price) * 100);
 
-  console.log(course,"course");
   
 
 
@@ -17,7 +16,7 @@ const CourseView = () => {
     <div className={classes.main} >
       {/* header */}
     <div className={classes.header} >
-      <h1>{route}</h1>
+    <h2>{course.title}</h2>
     </div>
     {/* header */}
     {/* card */}
